@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe6f2"/>
+      <stop offset="50%" stop-color="#ffb3d9"/>
+      <stop offset="100%" stop-color="#ff66b2"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <circle cx="400" cy="260" r="140" fill="#f4a261"/>
+  <!-- Bear-face Pomeranian Ears -->
+  <circle cx="300" cy="160" r="45" fill="#e76f51"/>
+  <circle cx="500" cy="160" r="45" fill="#e76f51"/>
+  <circle cx="300" cy="160" r="25" fill="#ffb3d9"/>
+  <circle cx="500" cy="160" r="25" fill="#ffb3d9"/>
+  <!-- Eyes -->
+  <circle cx="350" cy="240" r="18" fill="#1e293b"/>
+  <circle cx="450" cy="240" r="18" fill="#1e293b"/>
+  <circle cx="356" cy="234" r="6" fill="#ffffff"/>
+  <circle cx="456" cy="234" r="6" fill="#ffffff"/>
+  <!-- Nose & Snout -->
+  <ellipse cx="400" cy="285" rx="30" ry="22" fill="#ffffff"/>
+  <polygon points="400,270 388,285 412,285" fill="#1e293b"/>
+  <path d="M 388 288 Q 400 300 412 288" stroke="#1e293b" stroke-width="4" fill="none"/>
+  <!-- Text -->
+  <rect x="150" y="440" width="500" height="100" rx="30" fill="rgba(255,255,255,0.95)"/>
+  <text x="400" y="500" font-family="'Kanit', sans-serif" font-size="34" font-weight="bold" fill="#ff2a85" text-anchor="middle">🐻 น้องปอม Mochi (Pomeranian)</text>
+</svg>

@@ -1,0 +1,134 @@
+[
+  {
+    "id": "pompom-01",
+    "name": "น้องปอมน่ารัก (Mochi)",
+    "breed": "Pomeranian",
+    "breedTh": "ปอมเมอเรเนียน",
+    "price": 18500,
+    "gender": "female",
+    "age": "2.5 เดือน",
+    "color": "ส้มครีม (Orange Cream)",
+    "vaccinated": "ฉีดวัคซีนแล้ว 1 เข็ม",
+    "microchip": "มีไมโครชิปแท้",
+    "pedigree": "ใบเพ็ดดีกรีสมาคมฯ 4 เจน",
+    "images": [
+      "uploads/images/2k29mw.jpg"
+    ],
+    "videoUrl": "https://www.youtube.com/watch?v=6exq8BdJ3-0",
+    "audioBark": "playful_yap",
+    "customAudioUrl": "uploads/audio/เสียงหมาเห่า ปอมๆ_ น่ารักจัง Pomeranian Dog Break Sound.mp3",
+    "description": "น้องมูจิ ปอมเมอเรเนียนเพศเมีย หน้าหมี ขนแน่นหนา ฟูฟ่อง ซน น่ารัก สดใส ขี้อ้อน ชอบเล่นกับคน กินเก่งมาก สุขภาพแข็งแรง 100%",
+    "fatherBreed": "Pomeranian แชมป์ประเทศไทย",
+    "motherBreed": "Pomeranian เกรดโชว์"
+  },
+  {
+    "id": "corgi-02",
+    "name": "น้องคอร์กี้ขาขด (Peanut)",
+    "breed": "Welsh Corgi",
+    "breedTh": "เวลช์ คอร์กี้",
+    "price": 25000,
+    "gender": "male",
+    "age": "3 เดือน",
+    "color": "สามสี (Tricolor)",
+    "vaccinated": "ฉีดวัคซีนครบ 2 เข็ม",
+    "microchip": "มีไมโครชิปแท้",
+    "pedigree": "ใบเพ็ดสมาคมเต็มใบ",
+    "images": [
+      "uploads/images/images.jpg"
+    ],
+    "videoUrl": "https://www.youtube.com/watch?v=FF6ma2VMaco",
+    "audioBark": "boof_bark",
+    "customAudioUrl": "uploads/audio/Barking corgi.mp3",
+    "description": "น้องพีนัท คอร์กี้เพศผู้ ขาสั้น ดูก้นดุ๊กดิ๊ก หน้าตาฉลาด อารมณ์ดี ร่าเริง ชอบวิ่งเล่นในสนามหญ้า ฝึกขับถ่ายบนแผ่นรองได้แล้ว",
+    "fatherBreed": "Pembroke Corgi Import",
+    "motherBreed": "Pembroke Corgi TH CH"
+  },
+  {
+    "id": "frenchie-03",
+    "name": "น้องเฟรนช์บลูด็อก (Boba)",
+    "breed": "French Bulldog",
+    "breedTh": "เฟรนช์ บูลด็อก",
+    "price": 22000,
+    "gender": "male",
+    "age": "2 เดือน",
+    "color": "ลายเสือ (Brindle)",
+    "vaccinated": "ฉีดวัคซีนแล้ว 1 เข็ม",
+    "microchip": "มีไมโครชิปแท้",
+    "pedigree": "ใบเพ็ดสมาคมฯ",
+    "images": [
+      "uploads/images/large_7baa8b74-afc3-47de-b430-17938c62d82f.avif"
+    ],
+    "videoUrl": "https://www.youtube.com/watch?v=YZyuzYxfeJA",
+    "audioBark": "cute_snort",
+    "customAudioUrl": "uploads/audio/เสียงหมาเห่า เฟรนบลูด็อก.mp3",
+    "description": "น้องโบบา เฟรนช์บูลด็อกโครงสร้างสวย โครงใหญ่ หน้าสั้นย่นน่ารัก ขี้ประจบ เงียบสงบ ไม่เห่าพร่ำเพรื่อ เหมาะเลี้ยงในคอนโด",
+    "fatherBreed": "Frenchie Champion Line",
+    "motherBreed": "Frenchie Standard Line"
+  },
+  {
+    "id": "golden-04",
+    "name": "น้องโกลเด้นยิ้มหวาน (Cookie)",
+    "breed": "Golden Retriever",
+    "breedTh": "โกลเด้น รีทรีฟเวอร์",
+    "price": 19500,
+    "gender": "female",
+    "age": "2.5 เดือน",
+    "color": "ทองสว่าง (Light Golden)",
+    "vaccinated": "ฉีดวัคซีน 2 เข็ม + ถ่ายพยาธิ",
+    "microchip": "มีไมโครชิปแท้",
+    "pedigree": "ใบเพ็ดสมาคมฯ 4 เจน",
+    "images": [
+      "uploads/images/portrait-cute-golden-retriever-dog-260nw-265616255.webp"
+    ],
+    "videoUrl": "https://www.youtube.com/watch?v=DXITcHN3uwE",
+    "audioBark": "playful_yap",
+    "customAudioUrl": "uploads/audio/Barking Golden Retriever spots an airplane in the sky! - Rob M. (128k).mp3",
+    "description": "น้องคุกกี้ โกลเด้นตัวน้อย นิสัยใจดี เป็นมิตรกับทุกคนและเด็กๆ ขนหนาเงางาม ชอบเล่นคาบของ ร่าเริงแจ่มใสที่สุด",
+    "fatherBreed": "Golden Retriever Grand Champion",
+    "motherBreed": "Golden Retriever High Bloodline"
+  },
+  {
+    "id": "poodle-05",
+    "name": "น้องพุดเดิ้ลทอย (Teddy)",
+    "breed": "Poodle Toy",
+    "breedTh": "พุดเดิ้ล ทอย",
+    "price": 15000,
+    "gender": "male",
+    "age": "2 เดือน",
+    "color": "น้ำตาลแดง (Red Brown)",
+    "vaccinated": "ฉีดวัคซีนแล้ว 1 เข็ม",
+    "microchip": "มีไมโครชิปแท้",
+    "pedigree": "ใบเพ็ดสมาคมฯ",
+    "images": [
+      "uploads/images/images (1).jpg"
+    ],
+    "videoUrl": "https://www.youtube.com/watch?v=lCybCXkkbmk",
+    "audioBark": "playful_yap",
+    "customAudioUrl": "uploads/audio/เสียงหมาเห่า,หมาพุดเดิ้ล,dekdoo - อีสานบ้านเฮา (128k).mp3",
+    "description": "น้องเทดดี้ พุดเดิ้ลทอยเหมือนตุ๊กตาหมี ขนหยิกนุ่ม ขนไม่ร่วง เหมาะสำหรับคนแพ้ขนสัตว์ ฉลาดเรียนรู้ไว ฝึกง่าย",
+    "fatherBreed": "Poodle Toy Red Line",
+    "motherBreed": "Poodle Toy Red Line"
+  },
+  {
+    "id": "shiba-06",
+    "name": "น้องชิบะอินุญี่ปุ่น (Kenji)",
+    "breed": "Shiba Inu",
+    "breedTh": "ชิบะ อินุ",
+    "price": 29000,
+    "gender": "male",
+    "age": "3 เดือน",
+    "color": "แดงส้ม (Akame Red)",
+    "vaccinated": "ฉีดวัคซีนครบ 2 เข็ม",
+    "microchip": "มีไมโครชิปแท้ ฝังชิปสากล",
+    "pedigree": "ใบเพ็ดสมาคมสุนัขแห่งประเทศไทย",
+    "images": [
+      "uploads/images/istockphoto-1198387244-612x612.jpg"
+    ],
+    "videoUrl": "https://www.youtube.com/watch?v=O9B1OmzaMhs",
+    "audioBark": "boof_bark",
+    "customAudioUrl": "uploads/audio/Shiba Inu Barking and Howling - Feels like Life (128k).mp3",
+    "description": "น้องเคนจิ ชิบะอินุสายเลือดญี่ปุ่นแท้ หน้าสุ่มยิ้ม ยิ้มเก่ง สะอาด เป็นระเบียบ รักความสะอาด หน้าตามีเสน่ห์ดึงดูดใจ",
+    "fatherBreed": "Shiba Inu Japan Import",
+    "motherBreed": "Shiba Inu Champion Line"
+  }
+]

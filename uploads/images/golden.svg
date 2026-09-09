@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <circle cx="400" cy="260" r="140" fill="#fbbf24"/>
+  <!-- Folded Golden Retriever Ears -->
+  <path d="M 260 160 Q 200 240 250 320 Q 300 300 290 220 Z" fill="#d97706"/>
+  <path d="M 540 160 Q 600 240 550 320 Q 500 300 510 220 Z" fill="#d97706"/>
+  <!-- Eyes -->
+  <circle cx="350" cy="240" r="18" fill="#1e293b"/>
+  <circle cx="450" cy="240" r="18" fill="#1e293b"/>
+  <circle cx="356" cy="234" r="6" fill="#ffffff"/>
+  <circle cx="456" cy="234" r="6" fill="#ffffff"/>
+  <!-- Nose & Happy Smile -->
+  <ellipse cx="400" cy="290" rx="34" ry="24" fill="#ffffff"/>
+  <polygon points="400,275 385,290 415,290" fill="#1e293b"/>
+  <path d="M 380 295 Q 400 315 420 295" stroke="#1e293b" stroke-width="4" fill="none"/>
+  <!-- Text -->
+  <rect x="150" y="440" width="500" height="100" rx="30" fill="rgba(255,255,255,0.95)"/>
+  <text x="400" y="500" font-family="'Kanit', sans-serif" font-size="34" font-weight="bold" fill="#b45309" text-anchor="middle">🦮 น้องโกลเด้น Cookie (Golden)</text>
+</svg>

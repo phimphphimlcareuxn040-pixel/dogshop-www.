@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8f0fe"/>
+      <stop offset="50%" stop-color="#90caf9"/>
+      <stop offset="100%" stop-color="#2979ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <circle cx="400" cy="260" r="140" fill="#f4a261"/>
+  <!-- Pointy Corgi Ears -->
+  <polygon points="270,220 230,80 340,160" fill="#e76f51"/>
+  <polygon points="530,220 570,80 460,160" fill="#e76f51"/>
+  <!-- Eyes -->
+  <circle cx="350" cy="240" r="18" fill="#1e293b"/>
+  <circle cx="450" cy="240" r="18" fill="#1e293b"/>
+  <circle cx="356" cy="234" r="6" fill="#ffffff"/>
+  <circle cx="456" cy="234" r="6" fill="#ffffff"/>
+  <!-- Nose & White Blaze -->
+  <path d="M 400 160 L 375 280 L 425 280 Z" fill="#ffffff"/>
+  <ellipse cx="400" cy="285" rx="26" ry="18" fill="#ffffff"/>
+  <polygon points="400,272 388,285 412,285" fill="#1e293b"/>
+  <path d="M 388 288 Q 400 300 412 288" stroke="#1e293b" stroke-width="4" fill="none"/>
+  <!-- Text -->
+  <rect x="150" y="440" width="500" height="100" rx="30" fill="rgba(255,255,255,0.95)"/>
+  <text x="400" y="500" font-family="'Kanit', sans-serif" font-size="34" font-weight="bold" fill="#1a237e" text-anchor="middle">🍑 น้องคอร์กี้ Peanut (Welsh Corgi)</text>
+</svg>
