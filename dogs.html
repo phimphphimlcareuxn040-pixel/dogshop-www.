@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>รายการสุนัขทั้งหมด — Fon Paradise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Real-time Weather Bar -->
+  <div class="top-bar">
+    <div class="top-bar-info">
+      <span class="weather-badge" id="top-bar-weather">🌤️ กำลังโหลดสภาพอากาศ...</span>
+      <span id="live-date" style="font-weight: 500;">วันพุธที่ 9 กันยายน 2569</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <span>⏰ เวลาเรียลไทม์:</span>
+      <span class="clock-badge" id="live-clock">00:00:00</span>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        🐾 FonParadise <span class="badge">Pink & Blue</span>
+      </a>
+      
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link">🏠 หน้าแรก</a></li>
+        <li><a href="dogs.html" class="nav-link active">🐕 สุนัขทั้งหมด</a></li>
+        <li><a href="gallery.html" class="nav-link">🎥 วิดีโอ/เสียง/API</a></li>
+        <li><a href="care.html" class="nav-link">💊 การดูแล & อากาศ</a></li>
+        <li><a href="contact.html" class="nav-link">📞 ติดต่อเรา</a></li>
+        <li><a href="admin.html" class="nav-link">⚙️ ผู้ดูแลระบบ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn-action-overlay" onclick="window.appManager.openApiOverlay()">
+          🌐 สุ่มสุนัข API
+        </button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Filter & Catalog Section -->
+  <main class="section-container" style="margin-top: 30px;">
+    <div class="section-title">
+      <h2>ค้นหาและเลือกชมลูกสุนัข 🐶</h2>
+      <p>ใช้ตัวกรองเพื่อค้นหาน้องหมาที่ใช่ พร้อมรับชมภาพ วิดีโอ และฟังเสียงเห่าก่อนตัดสินใจ</p>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <div class="filter-group">
+        <label for="search-input">🔍 ค้นหา:</label>
+        <input type="text" id="search-input" class="input-search" placeholder="พิมพ์ชื่อ หรือสายพันธุ์..." style="min-width: 220px;">
+      </div>
+
+      <div class="filter-group">
+        <label for="breed-filter">🐕 สายพันธุ์:</label>
+        <select id="breed-filter" class="select-custom">
+          <option value="all">ทุกสายพันธุ์</option>
+          <option value="Pomeranian">ปอมเมอเรเนียน (Pomeranian)</option>
+          <option value="Welsh Corgi">เวลช์ คอร์กี้ (Welsh Corgi)</option>
+          <option value="French Bulldog">เฟรนช์ บูลด็อก (French Bulldog)</option>
+          <option value="Golden Retriever">โกลเด้น รีทรีฟเวอร์ (Golden Retriever)</option>
+          <option value="Poodle Toy">พุดเดิ้ล ทอย (Poodle Toy)</option>
+          <option value="Shiba Inu">ชิบะ อินุ (Shiba Inu)</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="price-filter">💰 ช่วงราคา:</label>
+        <select id="price-filter" class="select-custom">
+          <option value="all">ทุกช่วงราคา</option>
+          <option value="under20k">ต่ำกว่า ฿20,000</option>
+          <option value="20k-25k">฿20,000 - ฿25,000</option>
+          <option value="above25k">มากกว่า ฿25,000</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Grid Cards -->
+    <div class="grid-cards" id="dogs-grid">
+      <!-- Dynamic list from JS -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>🐾 FonParadise Shop</h4>
+        <p style="color: #94a3b8; font-size: 0.9rem;">
+          ฟาร์มสุนัขพันธุ์แท้ เกรดพรีเมียม การันตีสุขภาพ พร้อมระบบโอเวอร์เลย์รูป วิดีโอ และเสียงเห่าแบบเรียลไทม์
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>🔗 ลิงก์ด่วน</h4>
+        <ul>
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="dogs.html">รายการสุนัขทั้งหมด</a></li>
+          <li><a href="gallery.html">คลังมัลติมีเดีย & API</a></li>
+          <li><a href="care.html">คู่มือดูแล & สภาพอากาศ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>📞 ติดต่อสอบถาม</h4>
+        <ul>
+          <li>📍 จังหวัดเชียงใหม่ ประเทศไทย</li>
+          <li>📱 โทร: 081-234-5678</li>
+          <li>💬 Line: @fonparadise</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 FonParadise Shop — HTML5 & JavaScript Responsive Web Application inspired by dogshop</p>
+    </div>
+  </footer>
+
+  <!-- MODAL OVERLAYS -->
+  <div class="overlay-modal" id="image-overlay-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>🖼️ ขยายรูปภาพสินค้า</h3>
+        <button class="btn-close-modal">✕</button>
+      </div>
+      <div class="modal-body lightbox-img-wrap">
+        <img id="lightbox-img" src="" alt="Puppy Preview">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay-modal" id="video-overlay-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="video-modal-title">🎥 วิดีโอความน่ารัก</h3>
+        <button class="btn-close-modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="video-container">
+          <video id="modal-video-player" controls autoplay muted>
+            <source src="" type="video/mp4">
+          </video>
+          <iframe id="modal-youtube-player" style="display: none;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay-modal" id="audio-overlay-modal">
+    <div class="modal-content" style="max-width: 500px;">
+      <div class="modal-header">
+        <h3 id="audio-modal-title">🔊 เสียงเห่าน้องหมา</h3>
+        <button class="btn-close-modal">✕</button>
+      </div>
+      <div class="modal-body audio-player-card">
+        <div style="font-size: 4rem;">🐶🔊</div>
+        <p style="color: var(--text-muted); margin-top: 6px;">ฟังเสียงเห่า/เสียงอ่านของน้องหมา สามารถกดเปิด/หยุดเสียงได้ตลอดเวลา</p>
+        <div class="audio-visualizer">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
+        <audio id="modal-custom-audio" controls style="width: 100%; margin: 12px 0; display: none;"></audio>
+
+        <button class="btn-play-bark" id="btn-audio-play-toggle" onclick="window.appManager.toggleAudioModalSound()">
+          🔊 กดเล่น / หยุดเล่นเสียง
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay-modal" id="api-overlay-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>🌐 Live Dog API Overlay</h3>
+        <button class="btn-close-modal">✕</button>
+      </div>
+      <div class="modal-body" id="api-modal-content"></div>
+    </div>
+  </div>
+
+  <div class="overlay-modal" id="adoption-modal">
+    <div class="modal-content" style="max-width: 550px;">
+      <div class="modal-header">
+        <h3>🛒 สนใจรับเลี้ยงน้องหมา</h3>
+        <button class="btn-close-modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <div style="text-align: center; margin-bottom: 20px;">
+          <h4 style="color: var(--primary-pink); font-size: 1.4rem;" id="adopt-dog-name">น้องหมา</h4>
+          <div style="font-size: 1.3rem; font-weight: 800; color: var(--primary-blue);" id="adopt-dog-price">฿0</div>
+        </div>
+        <form onsubmit="alert('ส่งข้อมูลความสนใจเรียบร้อยแล้ว!'); window.appManager.closeModal('adoption-modal'); return false;">
+          <div style="margin-bottom: 12px;">
+            <label style="font-weight: 600; display: block; margin-bottom: 4px;">ชื่อ-นามสกุล:</label>
+            <input type="text" required class="input-search" style="width: 100%;" placeholder="กรอกชื่อของคุณ">
+          </div>
+          <div style="margin-bottom: 12px;">
+            <label style="font-weight: 600; display: block; margin-bottom: 4px;">เบอร์โทรศัพท์:</label>
+            <input type="tel" required class="input-search" style="width: 100%;" placeholder="08X-XXX-XXXX">
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+            📩 ส่งข้อมูลขอรับเลี้ยง
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    // URL Search Param Auto-filter (e.g. dogs.html?breed=Pomeranian)
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const breedParam = params.get('breed');
+      if (breedParam) {
+        const breedSelect = document.getElementById('breed-filter');
+        if (breedSelect) {
+          breedSelect.value = breedParam;
+          window.appManager.filterDogs();
+        }
+      }
+    });
+  </script>
+</body>
+</html>

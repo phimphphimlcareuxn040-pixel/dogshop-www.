@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>คู่มือการดูแล & คำนวณสภาพอากาศ — Fon Paradise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Real-time Weather Bar -->
+  <div class="top-bar">
+    <div class="top-bar-info">
+      <span class="weather-badge" id="top-bar-weather">🌤️ กำลังโหลดสภาพอากาศ...</span>
+      <span id="live-date" style="font-weight: 500;">วันพุธที่ 9 กันยายน 2569</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <span>⏰ เวลาเรียลไทม์:</span>
+      <span class="clock-badge" id="live-clock">00:00:00</span>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        🐾 FonParadise <span class="badge">Pink & Blue</span>
+      </a>
+      
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link">🏠 หน้าแรก</a></li>
+        <li><a href="dogs.html" class="nav-link">🐕 สุนัขทั้งหมด</a></li>
+        <li><a href="gallery.html" class="nav-link">🎥 วิดีโอ/เสียง/API</a></li>
+        <li><a href="care.html" class="nav-link active">💊 การดูแล & อากาศ</a></li>
+        <li><a href="contact.html" class="nav-link">📞 ติดต่อเรา</a></li>
+        <li><a href="admin.html" class="nav-link">⚙️ ผู้ดูแลระบบ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn-action-overlay" onclick="window.appManager.openApiOverlay()">
+          🌐 สุ่มสุนัข API
+        </button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Care & Weather Calculator Content -->
+  <main class="section-container" style="margin-top: 30px;">
+    <div class="section-title">
+      <h2>คู่มือการดูแลสุนัข & เครื่องคำนวณสภาพอากาศ 🌡️💧</h2>
+      <p>ประเมินความปลอดภัยในการพาน้องหมาออกกำลังกายตามอุณหภูมิและความชื้นแบบเรียลไทม์</p>
+    </div>
+
+    <!-- Weather Dog Safety Calculator -->
+    <div style="background: var(--card-bg); padding: 30px; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); margin-bottom: 40px; border: 2px solid var(--primary-pink);">
+      <h3 style="color: var(--primary-blue); font-size: 1.5rem; margin-bottom: 15px;">🧮 เครื่องคำนวณความปลอดภัยในการเดินเล่นของสุนัข</h3>
+      <p style="color: var(--text-muted); margin-bottom: 20px;">
+        กรอกอุณหภูมิและความชื้นสัมพัทธ์เพื่อประเมินความเสี่ยงต่อภาวะลมแดด (Heatstroke) ของน้องหมา
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 20px;">
+        <div>
+          <label style="font-weight: bold; color: var(--primary-blue);">🌡️ อุณหภูมิปัจจุบัน (°C):</label>
+          <input type="number" id="calc-temp" class="input-search" style="width: 100%; margin-top: 6px;" value="32" min="10" max="45">
+        </div>
+
+        <div>
+          <label style="font-weight: bold; color: var(--primary-blue);">💧 ความชื้นสัมพัทธ์ (%):</label>
+          <input type="number" id="calc-humidity" class="input-search" style="width: 100%; margin-top: 6px;" value="75" min="10" max="100">
+        </div>
+      </div>
+
+      <button class="btn-primary" style="width: 100%; justify-content: center; padding: 14px;" onclick="calculateDogSafety()">
+        ⚡ ประเมินผลความปลอดภัยทันที
+      </button>
+
+      <div id="safety-result" style="margin-top: 20px; padding: 20px; border-radius: var(--radius-md); background: var(--light-pink); text-align: center; display: none;">
+        <!-- Calculated Result -->
+      </div>
+    </div>
+
+    <!-- Care Tips Grid -->
+    <div class="grid-cards">
+      <div class="dog-card" style="padding: 24px;">
+        <div style="font-size: 2.5rem; margin-bottom: 10px;">💉</div>
+        <h3 style="color: var(--primary-pink);">ตารางวัคซีนสุนัขแรกเกิด</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 8px;">
+          สุนัขควรเริ่มฉีดวัคซีนรวมตั้งแต่อายุ 6-8 สัปดาห์ และกระตุ้นทุกๆ 3-4 สัปดาห์ จนครบ 3 เข็ม พร้อมฉีดพิษสุนัขบ้า
+        </p>
+      </div>
+
+      <div class="dog-card" style="padding: 24px;">
+        <div style="font-size: 2.5rem; margin-bottom: 10px;">🍖</div>
+        <h3 style="color: var(--primary-blue);">โภชนาการสำหรับลูกสุนัข</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 8px;">
+          ให้อาหารสูตรลูกสุนัขที่มีโปรตีนสูง 28-30% แบ่งกินวันละ 3-4 มื้อ พร้อมน้ำสะอาดเติมไว้ตลอด 24 ชั่วโมง
+        </p>
+      </div>
+
+      <div class="dog-card" style="padding: 24px;">
+        <div style="font-size: 2.5rem; margin-bottom: 10px;">🧼</div>
+        <h3 style="color: var(--primary-pink);">การอาบน้ำและดูแลขน</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 8px;">
+          อาบน้ำสัปดาห์ละ 1 ครั้ง ด้วยแชมพูสูตรอ่อนโยนสำหรับสุนัข เป่าขนให้แห้งสนิทเพื่อป้องกันเชื้อราและกลิ่นอับ
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>🐾 FonParadise Shop</h4>
+        <p style="color: #94a3b8; font-size: 0.9rem;">
+          ฟาร์มสุนัขเกรดพรีเมียม สายเลือดแท้ การันตีสุขภาพ 30 วัน
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>🔗 ลิงก์ด่วน</h4>
+        <ul>
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="dogs.html">รายการสุนัขทั้งหมด</a></li>
+          <li><a href="gallery.html">คลังมัลติมีเดีย & API</a></li>
+          <li><a href="care.html">คู่มือดูแล & สภาพอากาศ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>📞 ติดต่อสอบถาม</h4>
+        <ul>
+          <li>📍 จังหวัดเชียงใหม่ ประเทศไทย</li>
+          <li>📱 โทร: 081-234-5678</li>
+          <li>💬 Line: @fonparadise</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 FonParadise Shop — HTML5 & JavaScript Responsive Web Application inspired by dogshop</p>
+    </div>
+  </footer>
+
+  <!-- MODAL OVERLAYS -->
+  <div class="overlay-modal" id="api-overlay-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>🌐 Live Dog API Overlay</h3>
+        <button class="btn-close-modal">✕</button>
+      </div>
+      <div class="modal-body" id="api-modal-content"></div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    function calculateDogSafety() {
+      const temp = parseFloat(document.getElementById('calc-temp').value) || 30;
+      const humidity = parseFloat(document.getElementById('calc-humidity').value) || 70;
+      const resultBox = document.getElementById('safety-result');
+
+      resultBox.style.display = 'block';
+
+      // Heat Index approximation for dogs
+      const score = temp + (humidity * 0.15);
+
+      if (score >= 38) {
+        resultBox.style.background = '#fef2f2';
+        resultBox.style.border = '2px solid #ef4444';
+        resultBox.innerHTML = `
+          <h4 style="color: #dc2626; font-size: 1.3rem;">⚠️ ระดับความเสี่ยง: อันตรายสูงมาก! (High Risk)</h4>
+          <p style="color: #991b1b; margin-top: 6px;">
+            อุณหภูมิและความชื้นสูงเกินไป! <b>ห้าม</b> พาน้องหมาวิ่งเล่นกลางแจ้ง อาจเกิดภาวะ ฮีทสโตรก (Heatstroke) ได้ง่าย ให้พักผ่อนในห้องแอร์ค่ะ
+          </p>
+        `;
+      } else if (score >= 34) {
+        resultBox.style.background = '#fffbeb';
+        resultBox.style.border = '2px solid #f59e0b';
+        resultBox.innerHTML = `
+          <h4 style="color: #d97706; font-size: 1.3rem;">⚡ ระดับความเสี่ยง: ปานกลาง (Moderate Risk)</h4>
+          <p style="color: #92400e; margin-top: 6px;">
+            ควรพาน้องหมาเดินเล่นในที่ร่มหรือสวนสาธารณะ และจำกัดเวลาไม่เกิน 15-20 นาที พกน้ำดื่มติดตัวตลอดเวลา
+          </p>
+        `;
+      } else {
+        resultBox.style.background = '#f0fdf4';
+        resultBox.style.border = '2px solid #22c55e';
+        resultBox.innerHTML = `
+          <h4 style="color: #16a34a; font-size: 1.3rem;">✅ ระดับความเสี่ยง: ปลอดภัยดีเยี่ยม (Safe)</h4>
+          <p style="color: #166534; margin-top: 6px;">
+            สภาพอากาศแจ่มใสและเย็นสบาย เหมาะสำหรับการพาน้องหมาออกไปวิ่งเล่น ทำกิจกรรมกลางแจ้งและออกกำลังกายอย่างเต็มที่ค่ะ 🐕🏃
+          </p>
+        `;
+      }
+    }
+  </script>
+</body>
+</html>

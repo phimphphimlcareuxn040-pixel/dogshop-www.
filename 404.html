@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - ไม่พบหน้าเว็บที่ต้องการ | Fon Paradise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .not-found-container {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .not-found-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border-pink);
+      border-radius: 28px;
+      padding: 50px 30px;
+      max-width: 520px;
+      width: 100%;
+      box-shadow: 0 20px 40px rgba(255, 42, 133, 0.15);
+    }
+    .not-found-emoji {
+      font-size: 5rem;
+      margin-bottom: 20px;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🐾</span> Fon Paradise
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">🏠 หน้าแรก</a></li>
+        <li><a href="dogs.html" class="nav-link">🐕 สุนัขทั้งหมด</a></li>
+        <li><a href="gallery.html" class="nav-link">🎥 วิดีโอ/เสียง/API</a></li>
+        <li><a href="care.html" class="nav-link">💊 การดูแล & อากาศ</a></li>
+        <li><a href="contact.html" class="nav-link">📞 ติดต่อเรา</a></li>
+        <li><a href="admin.html" class="nav-link">⚙️ ผู้ดูแลระบบ</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="not-found-container">
+    <div class="not-found-card">
+      <div class="not-found-emoji">🐶❓</div>
+      <h1 style="color: var(--primary-pink); font-size: 2.2rem; margin-bottom: 12px; font-weight: 800;">404 - ไม่พบหน้าที่ค้นหา</h1>
+      <p style="color: var(--text-dark); margin-bottom: 24px; font-size: 1.1rem; line-height: 1.6;">
+        โฮ่ง! ดูเหมือนว่าหน้าที่คุณกำลังค้นหาจะวิ่งซนหายไปแล้ว...
+      </p>
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="index.html" class="btn-card-detail" style="padding: 12px 24px; font-size: 1rem;">🏠 กลับสู่หน้าแรก</a>
+        <a href="dogs.html" class="btn-card-buy" style="padding: 12px 24px; font-size: 1rem;">🐕 ดูสุนัขทั้งหมด</a>
+      </div>
+    </div>
+  </main>
+
+  <footer style="text-align: center; padding: 20px; color: var(--text-muted); font-size: 0.9rem;">
+    &copy; 2026 Fon Paradise Farm Chiang Mai. All rights reserved.
+  </footer>
+</body>
+</html>
