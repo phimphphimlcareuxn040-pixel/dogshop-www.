@@ -89,7 +89,7 @@ class AdminManager {
     tbody.innerHTML = this.dogs.map(dog => `
       <tr>
         <td style="text-align: center;">
-          <img src="${dog.images[0]}" alt="${dog.name}" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px; border: 2px solid var(--secondary-pink);">
+          <img src="${dog.images[0]}" alt="${dog.name}" onerror="this.onerror=null; this.src='${dog.images[1] || 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=800&q=80'}';" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px; border: 2px solid var(--secondary-pink);">
         </td>
         <td style="font-weight: 700; color: var(--primary-blue);">${dog.name}</td>
         <td><span style="background: var(--light-pink); color: var(--primary-pink); padding: 4px 10px; border-radius: 12px; font-weight: 600; font-size: 0.85rem;">${dog.breedTh} (${dog.breed})</span></td>

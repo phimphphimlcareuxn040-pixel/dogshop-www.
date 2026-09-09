@@ -524,7 +524,7 @@ class AppManager {
     gridContainer.innerHTML = dogsToRender.map(dog => `
       <div class="dog-card">
         <div class="dog-card-img-wrap">
-          <img src="${dog.images[0]}" alt="${dog.name}">
+          <img src="${dog.images[0]}" alt="${dog.name}" onerror="this.onerror=null; this.src='${dog.images[1] || 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=800&q=80'}';">
           <span class="card-badge-gender ${dog.gender === 'female' ? 'badge-female' : 'badge-male'}">
             ${dog.gender === 'female' ? '♀ เพศเมีย' : '♂ เพศผู้'}
           </span>

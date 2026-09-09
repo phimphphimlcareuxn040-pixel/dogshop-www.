@@ -2,7 +2,7 @@
    Fon Paradise - Dog Puppies Dataset & JSON Database Manager
    ========================================================================== */
 
-const DB_KEY = 'fonparadise_dogs_db';
+const DB_KEY = 'fonparadise_dogs_db_v4';
 const JSON_FILE_PATH = 'data/dogs.json';
 
 // Embedded fallback in case fetch is blocked by CORS in file:// protocol
@@ -20,13 +20,12 @@ const FALLBACK_DOGS_DATA = [
     microchip: "มีไมโครชิปแท้",
     pedigree: "ใบเพ็ดดีกรีสมาคมฯ 4 เจน",
     images: [
-      "uploads/images/pompom.svg",
-      "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=800&q=80"
+      "uploads/images/pomeranian.jpg",
+      "uploads/images/pompom.svg"
     ],
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    videoUrl: "https://www.youtube.com/shorts/PIwIrikflz8",
     audioBark: "playful_yap",
-    customAudioUrl: "",
+    customAudioUrl: "uploads/audio/bark_pomeranian.mp3",
     description: "น้องมูจิ ปอมเมอเรเนียนเพศเมีย หน้าหมี ขนแน่นหนา ฟูฟ่อง ซน น่ารัก สดใส ขี้อ้อน ชอบเล่นกับคน กินเก่งมาก สุขภาพแข็งแรง 100%",
     fatherBreed: "Pomeranian แชมป์ประเทศไทย",
     motherBreed: "Pomeranian เกรดโชว์"
@@ -44,13 +43,12 @@ const FALLBACK_DOGS_DATA = [
     microchip: "มีไมโครชิปแท้",
     pedigree: "ใบเพ็ดสมาคมเต็มใบ",
     images: [
-      "https://images.unsplash.com/photo-1612536057832-2ff7ead7819c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=800&q=80"
+      "uploads/images/corgi.jpg",
+      "uploads/images/corgi.svg"
     ],
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    videoUrl: "https://www.youtube.com/shorts/PIwIrikflz8",
     audioBark: "boof_bark",
-    customAudioUrl: "",
+    customAudioUrl: "uploads/audio/bark_corgi.mp3",
     description: "น้องพีนัท คอร์กี้เพศผู้ ขาสั้น ดูก้นดุ๊กดิ๊ก หน้าตาฉลาด อารมณ์ดี ร่าเริง ชอบวิ่งเล่นในสนามหญ้า ฝึกขับถ่ายบนแผ่นรองได้แล้ว",
     fatherBreed: "Pembroke Corgi Import",
     motherBreed: "Pembroke Corgi TH CH"
@@ -68,12 +66,11 @@ const FALLBACK_DOGS_DATA = [
     microchip: "มีไมโครชิปแท้",
     pedigree: "ใบเพ็ดสมาคมฯ",
     images: [
-      "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?auto=format&fit=crop&w=800&q=80"
+      "uploads/images/frenchie.jpg"
     ],
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    videoUrl: "https://www.youtube.com/shorts/PIwIrikflz8",
     audioBark: "cute_snort",
-    customAudioUrl: "",
+    customAudioUrl: "uploads/audio/bark_frenchie.mp3",
     description: "น้องโบบา เฟรนช์บูลด็อกโครงสร้างสวย โครงใหญ่ หน้าสั้นย่นน่ารัก ขี้ประจบ เงียบสงบ ไม่เห่าพร่ำเพรื่อ เหมาะเลี้ยงในคอนโด",
     fatherBreed: "Frenchie Champion Line",
     motherBreed: "Frenchie Standard Line"
@@ -91,12 +88,12 @@ const FALLBACK_DOGS_DATA = [
     microchip: "มีไมโครชิปแท้",
     pedigree: "ใบเพ็ดสมาคมฯ 4 เจน",
     images: [
-      "https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?auto=format&fit=crop&w=800&q=80"
+      "uploads/images/golden.jpg",
+      "uploads/images/golden.svg"
     ],
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
-    audioBark: "happy_bark",
-    customAudioUrl: "",
+    videoUrl: "https://www.youtube.com/shorts/PIwIrikflz8",
+    audioBark: "playful_yap",
+    customAudioUrl: "uploads/audio/bark_golden.mp3",
     description: "น้องคุกกี้ โกลเด้นตัวน้อย นิสัยใจดี เป็นมิตรกับทุกคนและเด็กๆ ขนหนาเงางาม ชอบเล่นคาบของ ร่าเริงแจ่มใสที่สุด",
     fatherBreed: "Golden Retriever Grand Champion",
     motherBreed: "Golden Retriever High Bloodline"
@@ -114,12 +111,11 @@ const FALLBACK_DOGS_DATA = [
     microchip: "มีไมโครชิปแท้",
     pedigree: "ใบเพ็ดสมาคมฯ",
     images: [
-      "https://images.unsplash.com/photo-1591769225440-811ad7d6eca2?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1546527868-ccb7ee7dfa6a?auto=format&fit=crop&w=800&q=80"
+      "uploads/images/poodle.jpg"
     ],
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    videoUrl: "https://www.youtube.com/shorts/PIwIrikflz8",
     audioBark: "playful_yap",
-    customAudioUrl: "",
+    customAudioUrl: "uploads/audio/bark_poodle.mp3",
     description: "น้องเทดดี้ พุดเดิ้ลทอยเหมือนตุ๊กตาหมี ขนหยิกนุ่ม ขนไม่ร่วง เหมาะสำหรับคนแพ้ขนสัตว์ ฉลาดเรียนรู้ไว ฝึกง่าย",
     fatherBreed: "Poodle Toy Red Line",
     motherBreed: "Poodle Toy Red Line"
@@ -137,12 +133,11 @@ const FALLBACK_DOGS_DATA = [
     microchip: "มีไมโครชิปแท้ ฝังชิปสากล",
     pedigree: "ใบเพ็ดสมาคมสุนัขแห่งประเทศไทย",
     images: [
-      "https://images.unsplash.com/photo-1583511655826-05700d52f4d9?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1561037404-61cd46aa615b?auto=format&fit=crop&w=800&q=80"
+      "uploads/images/shiba.jpg"
     ],
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    videoUrl: "https://www.youtube.com/shorts/PIwIrikflz8",
     audioBark: "boof_bark",
-    customAudioUrl: "",
+    customAudioUrl: "uploads/audio/bark_shiba.mp3",
     description: "น้องเคนจิ ชิบะอินุสายเลือดญี่ปุ่นแท้ หน้าสุ่มยิ้ม ยิ้มเก่ง สะอาด เป็นระเบียบ รักความสะอาด หน้าตามีเสน่ห์ดึงดูดใจ",
     fatherBreed: "Shiba Inu Japan Import",
     motherBreed: "Shiba Inu Champion Line"
@@ -165,7 +160,7 @@ window.fetchDogsJSON = async function() {
 // Database Handler Functions
 window.loadDogsDatabase = function() {
   try {
-    const stored = localStorage.getItem(DB_KEY) || localStorage.getItem('pawparadise_dogs_db');
+    const stored = localStorage.getItem(DB_KEY);
     if (stored) {
       const parsed = JSON.parse(stored);
       if (Array.isArray(parsed) && parsed.length > 0) {

@@ -2,8 +2,17 @@ import http.server
 import socketserver
 import os
 import json
+import mimetypes
 from email.parser import BytesParser
 from email.policy import default
+
+mimetypes.init()
+mimetypes.add_type('image/svg+xml', '.svg')
+mimetypes.add_type('image/webp', '.webp')
+mimetypes.add_type('image/avif', '.avif')
+mimetypes.add_type('audio/mpeg', '.mp3')
+mimetypes.add_type('video/x-matroska', '.mkv')
+mimetypes.add_type('video/mp4', '.mp4')
 
 PORT = 8000
 DIRECTORY = os.path.dirname(os.path.abspath(__file__))
@@ -11,6 +20,10 @@ DIRECTORY = os.path.dirname(os.path.abspath(__file__))
 class PawParadiseRequestHandler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=DIRECTORY, **kwargs)
+
+    def end_headers(self):
+        self.send_header('Access-Control-Allow-Origin', '*')
+        super().end_headers()
 
     def do_POST(self):
         # API Endpoint 1: File Upload Handler
